@@ -222,3 +222,8 @@ __marimo__/
 # Local system files and generated course website mirror
 .DS_Store
 /website/mirror/
+
+# Local HDL simulation outputs
+/lab1/code/build/
+*.vcd
+*.vvp
