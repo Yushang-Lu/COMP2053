@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local system files and generated course website mirror
+.DS_Store
+/website/mirror/
