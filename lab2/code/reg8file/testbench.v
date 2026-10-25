@@ -9,7 +9,6 @@ module testbench;
     reg [2:0] wsel;
     reg [2:0] rsel;
     wire [7:0] q;
-    integer checks = 0;
 
     always #5 clk = ~clk;
 
@@ -46,32 +45,7 @@ module testbench;
         #2 rsel = 3'd1;
         #10 rsel = 3'd6;
         #18;
-        $display("PASS: testbench, %0d checks, report waveform ends at 100 ns.", checks);
         $finish;
-    end
-
-    task check_q;
-        input [7:0] expected_q;
-        begin
-            checks = checks + 1;
-            if (q !== expected_q) begin
-                $fatal(1, "testbench at %0t: rsel=%0d expected %h, got %h",
-                       $time, rsel, expected_q, q);
-            end
-        end
-    endtask
-
-    initial begin
-        #1 check_q(8'h00);
-        #15 check_q(8'h00);
-        #20 check_q(8'h00);
-        #7 check_q(8'h3c);
-        #6 check_q(8'h3c);
-        #4 check_q(8'ha5);
-        #6 check_q(8'ha5);
-        #4 check_q(8'h00);
-        #10 check_q(8'h00);
-        #10 check_q(8'h00);
     end
 
     initial begin

@@ -140,7 +140,7 @@
 1. **File → Project → New**，另建工程 `reg8file`，器件仍为 `xc7a35tcsg324-1`。不要在 dff 工程上继续堆文件。
 2. 添加 `code/reg8file/reg8file.v` 到 Design Sources，设设计顶层为 `reg8file`。
 3. 添加 `code/reg8file/testbench.v` 到 Simulation Sources，设仿真顶层为 `testbench`。
-4. **Run Simulation → Run Behavioral Simulation**，Run All，仿真在 100 ns 结束。控制台应有 `PASS: testbench, 10 checks`，不得有 FATAL。
+4. **Run Simulation → Run Behavioral Simulation**，Run All，仿真在 100 ns 结束。此文件只产生激励，不打印 PASS；按下表查看波形判断结果。
 5. 波形顺序调整为 `clk、clr、en、wsel、rsel、d、q`。`wsel/rsel` 右击 Radix 选 Unsigned Decimal；`d/q` 选 Hexadecimal。
 6. 点击 Zoom Fit，显示 0–100 ns。放大信号名区域，确保 d/q 的总线值、时间刻度清晰。不要用辅助长时间自检的波形代替。
 
@@ -279,7 +279,7 @@ reg8file/
 | 仿真输入出现 X/Z | 是否选对仿真顶层；是否添加了 testbench；尝试 Relaunch；不要靠反复 Relaunch 掩盖真正的连接错误 |
 | q 在 0 ns 短暂未知 | 看初始复位完成后的值；未按复位前不要依赖上电状态 |
 | 仿真时长不对 | dff_sim 与 testbench 均为 100 ns；是否误选了辅助 check 顶层 |
-| 没看到 PASS | dff_sim 本来就不打印；testbench 应打印 10 checks，出现 FATAL 才是真正检查失败 |
+| 没看到 PASS | dff_sim 和 testbench 均不打印 PASS，需查看波形；独立自检文件才会自动判断并打印结果 |
 | 仿真成功但综合报延时不可综合 | 测试文件是否误放到 Design Sources，设计顶层是否误设为 testbench |
 | 未约束端口 / I/O 标准错误 | 是否加了对应 XDC；是否拼错顶层端口；不要降低 DRC 严重级别 |
 | 时钟或器件错误 | 必须是 EGO1、xc7a35tcsg324-1、P17、10 ns，不能使用 Minisys 的 Y18 |
@@ -311,13 +311,13 @@ sh lab2/code/run_checks.sh
 
 需要本机已有 `iverilog、vvp、tclsh、python3`。脚本自动创建 `lab2/code/build/`，错误即停止。两个 VCD 分别是 `dff_sim.vcd` 和 `reg8file_sim.vcd`，都位于 build 中；可使用已有波形查看器打开，但报告按课程要求在 Vivado 中获取实际截图。
 
-### 2026-10-20 本机实际验证记录
+### 2026-10-21 简化报告仿真后的本机复验记录
 
 | 检查 | 已运行结果 |
 | --- | --- |
 | D 触发器自检 | 16 组状态/输入组合，65 次检查通过 |
 | 寄存器文件自检 | 8 个地址 × 256 种数据；2,058 次写入，22,617 次检查通过 |
-| 报告用 testbench | 10 次检查通过，100 ns 结束 |
+| 报告用 testbench | 运行至 100 ns，由独立 VCD 检查核对波形 |
 | 两份 XDC | 5 / 25 个端口；管脚无重复；LVCMOS33；10 ns 时钟 |
 | 两份 VCD | 核对输入与输出转换时刻，100 ns 结束 |
 
