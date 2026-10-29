@@ -7,4 +7,5 @@
 - 优先查本地 `website/mirror/`、对应实验说明与硬件手册；镜像可能过时或未下载，新增实验需核实资料版本。
 - EGO1 与 Minisys 约束不能混用；板型、管脚或要求有冲突时先确认，不猜测。
 - 修改前查 `git status`，尊重用户已有改动；只提交明确要求提交的范围，不把缓存或整个 Vivado 工程纳入提交。
-- 详细经验与资料入口见 [`agent-notes/README.md`](agent-notes/README.md)；PDF 工具为 Lab1 专用，不是通用 Markdown 引擎。
+- Lab3 保留单模块设计，不为了形式拆出计数器；报告 testbench 保持简洁，不重新加入 VCD 导出、断言或自动评分。时钟约束 `create_clock` 应保留，它不是可选的仿真辅助代码。
+- 详细经验与资料入口见 [`agent-notes/README.md`](agent-notes/README.md)。Lab1 PDF 工具是专用布局；Lab2/Lab3 各有 Markdown＋ReportLab 手册工具，也不是通用报告渲染器。
