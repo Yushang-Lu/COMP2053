@@ -35,10 +35,4 @@ module testbench;
         #520 $finish;
     end
 
-    initial begin
-        if ($test$plusargs("vcd")) begin
-            $dumpfile("lab3_sim.vcd");
-            $dumpvars(0, testbench);
-        end
-    end
 endmodule
