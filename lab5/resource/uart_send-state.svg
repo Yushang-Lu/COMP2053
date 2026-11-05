@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <rect width="1400" height="1000" fill="white" />
+  <polyline points="60,260 175,260" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="175,260 163.2941876694152,265.654551943446 163.2941876694152,254.345448056554" fill="#222222" />
+  <text x="95" y="225" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">rst = 1</text>
+  <polyline points="425,260 875,260" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="875,260 863.2941876694152,265.654551943446 863.2941876694152,254.345448056554" fill="#222222" />
+  <text x="650" y="230" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">valid = 1</text>
+  <polyline points="240,205 170,150 430,150 360,205" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="360,205 365.71099084917313,193.32161896833892 372.69799896353186,202.21417475025004" fill="#222222" />
+  <text x="300" y="120" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">valid = 0</text>
+  <polyline points="1060,205 1120,150 880,150 940,205" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="940,205 927.5500919646795,201.25837068751318 935.1919319875136,192.92181793533047" fill="#222222" />
+  <text x="1000" y="120" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count != 10415</text>
+  <polyline points="1000,325 1000,555" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="1000,555 994.345448056554,543.2941876694152 1005.654551943446,543.2941876694152" fill="#222222" />
+  <text x="1160" y="440" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count == 10415</text>
+  <polyline points="875,620 425,620" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="425,620 436.7058123305848,614.345448056554 436.7058123305848,625.654551943446" fill="#222222" />
+  <text x="650" y="565" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count == 10415</text>
+  <text x="650" y="591" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">&amp;&amp; bit_index == 7</text>
+  <polyline points="1060,675 1120,730 880,730 940,675" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="940,675 935.1919319875136,687.0781820646696 927.5500919646795,678.7416293124868" fill="#222222" />
+  <text x="1000" y="780" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count != 10415</text>
+  <text x="1000" y="806" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">|| bit_index != 7</text>
+  <polyline points="300,555 300,325" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="300,325 305.654551943446,336.7058123305848 294.345448056554,336.7058123305848" fill="#222222" />
+  <text x="145" y="440" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count == 10415</text>
+  <polyline points="240,675 170,730 430,730 360,675" fill="none" stroke="#222222" stroke-width="2" />
+  <polygon points="360,675 372.69799896353186,677.7858252497499 365.71099084917313,686.678381031661" fill="#222222" />
+  <text x="300" y="780" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count != 10415</text>
+  <ellipse cx="300" cy="260" rx="125" ry="65" fill="white" stroke="#222222" stroke-width="2" />
+  <text x="300" y="251" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="24">IDLE (00)</text>
+  <text x="300" y="284" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">dout &lt;= 1</text>
+  <ellipse cx="1000" cy="260" rx="125" ry="65" fill="white" stroke="#222222" stroke-width="2" />
+  <text x="1000" y="251" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="24">START (01)</text>
+  <text x="1000" y="284" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">dout &lt;= 0</text>
+  <ellipse cx="1000" cy="620" rx="125" ry="65" fill="white" stroke="#222222" stroke-width="2" />
+  <text x="1000" y="611" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="24">DATA (10)</text>
+  <text x="1000" y="644" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">dout &lt;= data_reg[bit_index]</text>
+  <ellipse cx="300" cy="620" rx="125" ry="65" fill="white" stroke="#222222" stroke-width="2" />
+  <text x="300" y="611" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="24">STOP (11)</text>
+  <text x="300" y="644" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="17">dout &lt;= 1</text>
+  <text x="700" y="48" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="26">uart_send: four-state FSM (100 MHz, 9600 baud, 8N1)</text>
+  <text x="700" y="870" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">Registered outputs: rules inside states execute at posedge clk using pre-edge values.</text>
+  <text x="700" y="902" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">dout therefore lags state / bit_index changes by one clock (10 ns); each bit lasts 10416 clocks.</text>
+  <text x="700" y="934" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">bit_count: 0..10415 per bit. DATA bit_index: 0..7, increments at bit_count == 10415.</text>
+  <text x="700" y="966" fill="#111111" text-anchor="middle" font-family="Arial, sans-serif" font-size="21">rst = 1 asynchronously resets any state to IDLE, dout to 1, and counters / data_reg to 0.</text>
+</svg>

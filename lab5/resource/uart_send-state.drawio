@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="uart_send" id="uart-send">
+    <mxGraphModel page="1" pageWidth="1400" pageHeight="1000" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;entryX=0.0;entryY=0.5;entryPerimeter=0;" id="edge-0" edge="1" parent="1" target="IDLE">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="260" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-1" value="rst = 1" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="55.5265" y="204" width="78.947" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" id="edge-1" edge="1" parent="1" target="START" source="IDLE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-2" value="valid = 1" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="600.604" y="209" width="98.792" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.26;exitY=0.07692307692307693;exitPerimeter=0;entryX=0.74;entryY=0.07692307692307693;entryPerimeter=0;" id="edge-2" edge="1" parent="1" target="IDLE" source="IDLE">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="150" />
+              <mxPoint x="430" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-3" value="valid = 0" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="250.60399999999998" y="99" width="98.792" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.74;exitY=0.07692307692307693;exitPerimeter=0;entryX=0.26;entryY=0.07692307692307693;entryPerimeter=0;" id="edge-3" edge="1" parent="1" target="START" source="START">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="150" />
+              <mxPoint x="880" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-4" value="bit_count != 10415" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="903.312" y="99" width="193.376" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" id="edge-4" edge="1" parent="1" target="DATA" source="START">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-5" value="bit_count == 10415" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="1060.099" y="419" width="199.802" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.0;exitY=0.5;exitPerimeter=0;entryX=1.0;entryY=0.5;entryPerimeter=0;" id="edge-5" edge="1" parent="1" target="STOP" source="DATA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-6" value="bit_count == 10415&lt;br&gt;&amp;amp;&amp;amp; bit_index == 7" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="550.099" y="544" width="199.802" height="52" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.74;exitY=0.9230769230769231;exitPerimeter=0;entryX=0.26;entryY=0.9230769230769231;entryPerimeter=0;" id="edge-6" edge="1" parent="1" target="DATA" source="DATA">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="730" />
+              <mxPoint x="880" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-7" value="bit_count != 10415&lt;br&gt;|| bit_index != 7" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="903.312" y="759" width="193.376" height="52" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.5;entryY=1.0;entryPerimeter=0;" id="edge-7" edge="1" parent="1" target="IDLE" source="STOP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-8" value="bit_count == 10415" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="45.099000000000004" y="419" width="199.802" height="26" as="geometry" />
+        </mxCell>
+        <mxCell style="html=1;endArrow=block;endFill=1;rounded=0;strokeWidth=2;exitX=0.26;exitY=0.9230769230769231;exitPerimeter=0;entryX=0.74;entryY=0.9230769230769231;entryPerimeter=0;" id="edge-8" edge="1" parent="1" target="STOP" source="STOP">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="730" />
+              <mxPoint x="430" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-9" value="bit_count != 10415" style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="203.312" y="759" width="193.376" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="IDLE" value="IDLE (00)&lt;br&gt;dout &amp;lt;= 1" style="ellipse;html=1;whiteSpace=wrap;fontSize=19;fillColor=#ffffff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="175" y="195" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="START" value="START (01)&lt;br&gt;dout &amp;lt;= 0" style="ellipse;html=1;whiteSpace=wrap;fontSize=19;fillColor=#ffffff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="875" y="195" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DATA" value="DATA (10)&lt;br&gt;dout &amp;lt;= data_reg[bit_index]" style="ellipse;html=1;whiteSpace=wrap;fontSize=19;fillColor=#ffffff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="875" y="555" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="STOP" value="STOP (11)&lt;br&gt;dout &amp;lt;= 1" style="ellipse;html=1;whiteSpace=wrap;fontSize=19;fillColor=#ffffff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="175" y="555" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="label-10" value="uart_send: four-state FSM (100 MHz, 9600 baud, 8N1)" style="text;html=1;align=center;verticalAlign=middle;fontSize=26;" vertex="1" parent="1">
+          <mxGeometry x="374.971" y="22" width="650.058" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="label-11" value="Registered outputs: rules inside states execute at posedge clk using pre-edge values." style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="292.554" y="849" width="814.892" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="label-12" value="dout therefore lags state / bit_index changes by one clock (10 ns); each bit lasts 10416 clocks." style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="252.27599999999995" y="881" width="895.4480000000001" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="label-13" value="bit_count: 0..10415 per bit. DATA bit_index: 0..7, increments at bit_count == 10415." style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="301.85699999999997" y="913" width="796.2860000000001" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="label-14" value="rst = 1 asynchronously resets any state to IDLE, dout to 1, and counters / data_reg to 0." style="text;html=1;align=center;verticalAlign=middle;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="282.894" y="945" width="834.212" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
