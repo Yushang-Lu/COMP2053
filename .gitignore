@@ -227,3 +227,16 @@ __marimo__/
 /lab1/code/build/
 *.vcd
 *.vvp
+
+# Lab6 LaTeX report intermediates; keep sources, cover asset, and report.pdf.
+/lab6/report/src/.build/
+/lab6/report/src/*.aux
+/lab6/report/src/*.out
+/lab6/report/src/*.toc
+/lab6/report/src/*.lof
+/lab6/report/src/*.lot
+/lab6/report/src/*.fls
+/lab6/report/src/*.fdb_latexmk
+/lab6/report/src/*.synctex.gz
+/lab6/report/src/*.xdv
+/lab6/report/src/main.pdf

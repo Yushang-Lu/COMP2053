@@ -65,6 +65,7 @@ function [7:0] encode;
 endfunction
 
 always @(negedge clk) begin
+    #1;
     if (!rst && previous_valid && dut.recv_valid)
         $fatal(1, "RX valid lasts longer than one clock");
     previous_valid = dut.recv_valid;
